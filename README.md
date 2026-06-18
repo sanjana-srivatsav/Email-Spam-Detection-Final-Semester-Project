@@ -1,6 +1,6 @@
 # **📧 Email Spam Detection System – Final Semester Project**
 
-# **Full Stack Machine Learning Web Application**
+### **Full Stack Machine Learning Web Application**
 
 ---
 
