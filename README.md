@@ -30,7 +30,7 @@ The dataset is used to train the machine learning model for accurate email class
 ## **🛠 Tools & Technologies**
 - Python
 - Flask
-* SQLite
+- SQLite
 - Pandas
 - Scikit-learn
 - HTML
