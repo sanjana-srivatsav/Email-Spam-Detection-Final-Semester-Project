@@ -52,31 +52,31 @@ The dataset is used to train the machine learning model for accurate email class
 
 ## **📊 System Modules**
 
-### **User Authentication Module**
+- ### **User Authentication Module**
 
 Handles user registration, login, session management, and role-based access.
 
-### **User Interface Module**
+- ### **User Interface Module**
 
 Provides interactive web pages for user registration, login, and email classification.
 
-### **Model Training Module**
+- ### **Model Training Module**
 
 Trains the Multinomial Naive Bayes model using the spam dataset.
 
-### **Feature Extraction Module**
+- ### **Feature Extraction Module**
 
 Converts email text into numerical features using vectorization.
 
-### **Spam Detection Module**
+- ### **Spam Detection Module**
 
 Classifies email messages using the trained machine learning model.
 
-### **Admin Module**
+- ### **Admin Module**
 
 Displays registered users and overall spam detection statistics.
 
-### **Database Module**
+- ### **Database Module**
 
 Stores user information and prediction history using SQLite.
 
