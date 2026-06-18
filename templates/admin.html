@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .dashboard {
+            background: rgba(0, 0, 0, 0.7);
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            width: 700px;
+
+            text-align: center;
+
+        }
+
+        table {
+
+            margin: auto;
+
+            border-collapse: collapse;
+
+            margin-top: 20px;
+
+        }
+
+        table,
+        th td {
+            border: 1px solid white;
+            padding: 10px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>Admin Dashboard</h1>
+
+        <h2>Registered Users</h2>
+
+        <table>
+
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+            </tr>
+
+            {% for u,r in user %}
+
+            <tr>
+                <td>{{u}}</td>
+                <td>{{r}}</td>
+            </tr>
+        </table>
+
+        <table>
+            {% endfor %}
+        </table>
+
+        <h2>Spam Detection chart</h2>
+
+        <canvas id="chart" data-spam="{{spam}}" data-ham="{{ham}}"> </canvas>
+
+        <script>
+
+            var canvas = document.getElementById("chart")
+
+            var spam = parseInt(canvas.getAttribute("data-spam"))
+            var ham = parseInt(canvas.getAttribute("data-ham"))
+
+            new Chart(canvas, {
+
+                type: "pie",
+
+                data: {
+                    labels: ["spam", "Not spam"],
+                    datasets: [{
+                        data: [spam, ham],
+                        backgroundColor: ["red", "green"]
+                    }]
+                }
+
+            })
+        </script>
+
+        <br>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+    </div>
+</body>
+
+</html>

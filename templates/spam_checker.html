@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Email Spam Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="predict">
+
+    <div class="result-row">
+
+        <form action="/predict" method="POST">
+            <textarea name="message" placeholder="Enter Email Text" required></textarea>
+            <br><br>
+            <button type="submit">Check</button>
+
+
+
+            {% if result == "Spam" %}
+            <h2 style="color: rgb(250,12,12);"> ⚠ Spam Email Detected</h2>
+            {% else %}
+            <h2 style="color: rgb(6,234,6);"> ✅ Not Spam Email</h2>
+
+            {% endif %}
+
+            <br>
+
+            <a href="/logout" class="logout-btn">Logout</a>
+
+    </div>
+
+    </form>
+
+</body>
+
+</html>
