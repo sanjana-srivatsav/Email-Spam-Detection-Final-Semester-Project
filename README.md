@@ -27,12 +27,16 @@ The dataset is used to train the machine learning model for accurate email class
 
 ---
 
-## **🛠 Tools & Technologies**
+## **🛠 Technology Stack**
+
+### **Backend**
 - Python
 - Flask
 - SQLite
-- Pandas
 - Scikit-learn
+- Pandas
+  
+### **Frontend**
 - HTML
 - CSS
 
@@ -47,6 +51,17 @@ The dataset is used to train the machine learning model for accurate email class
 - Role-Based Access Control
 - Responsive User Interface
 - Offline Functionality (No Cloud / XAMPP)
+
+---
+
+## **🧠 Machine Learning Model**
+- Algorithm: Multinomial Naive Bayes
+- Text Processing: Vectorization
+- Dataset: Local spam email dataset (dataset/spam.csv)
+
+The trained model is stored locally using:
+- spam_model.pkl
+- vectorizer.pkl
 
 ---
 
